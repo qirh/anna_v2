@@ -8,13 +8,23 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <video id="background-video" loop autoPlay muted>
+      {/* <video id="background-video" loop autoPlay muted>
         <source
           src="https://d2qxpcg73pnz75.cloudfront.net/annatv_9mb.mp4"
           type="video/mp4"
         />
         Your browser does not support the video tag.
-      </video>
+      </video> */}
+      <div dangerouslySetInnerHTML={{ __html: `
+        <video
+          loop
+          muted
+          autoplay
+          playsinline
+          src="https://d2qxpcg73pnz75.cloudfront.net/annatv_9mb.mp4"
+          class="background-video"
+        />,
+      ` }}></div>
       <main>
 
 
@@ -29,7 +39,7 @@ export default function Home() {
       </footer>
 
       <style jsx>{`
-        #background-video{
+        .background-video{
           height: 100%;
           width: 100%;
           float: left;
