@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div className="container">
       <Head>
-        <title>Anna Kukla</title>
+        <title>Anna K</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -21,6 +21,7 @@ export default function Home() {
           muted
           autoplay
           playsinline
+          type="video/mp4"
           src="https://d2qxpcg73pnz75.cloudfront.net/annatv_9mb.mp4"
           class="background-video"
         />,
@@ -35,19 +36,10 @@ export default function Home() {
       </main>
 
       <footer>
-        © Copyright {new Date().getFullYear()} Anna Kukla
+        Made with 💙 in NYC
       </footer>
 
       <style jsx>{`
-        .background-video{
-          height: 100%;
-          width: 100%;
-          float: left;
-          top: 0;
-          padding: none;
-          position: fixed; /* optional depending on what you want to do in your app */
-          z-index: 0;
-        }
         .container {
           min-height: 100vh;
           padding: 0 0.5rem;
@@ -69,22 +61,12 @@ export default function Home() {
 
         footer {
           width: 100%;
-          height: 100px;
+          height: 50px;
           border-top: 1px solid #eaeaea;
           display: flex;
           justify-content: center;
           align-items: center;
           z-index: 1;
-        }
-
-        footer img {
-          margin-left: 0.5rem;
-        }
-
-        footer a {
-          display: flex;
-          justify-content: center;
-          align-items: center;
         }
 
         a {
@@ -134,6 +116,15 @@ export default function Home() {
 
         * {
           box-sizing: border-box;
+        }
+        .background-video {
+          object-fit: cover;
+          width: 100vw;
+          height: 100vh;
+          position: fixed;
+          top: 0;
+          left: 0;
+          z-index: 0;
         }
       `}</style>
     </div>
