@@ -1,6 +1,15 @@
 import Head from 'next/head'
+import Image from 'next/image'
+// import React from 'react'
+
+function imageLoader({ src }) {
+  // const relativeSrc = (src) => src.split("/").pop();
+
+  return src;
+}
 
 export default function Home() {
+  // const lazyRoot = React.useRef(null)
   return (
     <div className="container">
       <Head>
@@ -8,30 +17,41 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      {/* <video id="background-video" loop autoPlay muted>
-        <source
-          src="https://d2qxpcg73pnz75.cloudfront.net/annatv_9mb.mp4"
-          type="video/mp4"
-        />
-        Your browser does not support the video tag.
-      </video> */}
-      <div dangerouslySetInnerHTML={{ __html: `
+      <div dangerouslySetInnerHTML={{
+        __html: `
         <video
           loop
           muted
           autoplay
           playsinline
           type="video/mp4"
-          src="https://d2qxpcg73pnz75.cloudfront.net/annatv_9mb.mp4"
+          src="https://d2qxpcg73pnz75.cloudfront.net/annatv_6mb.mp4"
           class="background-video"
         />,
       ` }}></div>
+
       <main>
 
+        {/* <Image
+          loader={imageLoader}
+          src={"https://d2qxpcg73pnz75.cloudfront.net/one-crop.png"}
+          width={350}
+          height={350}
+          className="image"
+        /> */}
 
-        <h1 className="title">
-          Anna Kukla
-        </h1>
+        {/* <img src="image.jpg alt="describe the image here">
+        </img> */}
+
+        <img
+          src="https://d2qxpcg73pnz75.cloudfront.net/one-crop.png"
+          className="image"
+          ></img>
+
+        <span>
+          hey! I'm Anna Kukla. I work the most amazing and best Costumer in the whole world. I specialise in Film & TV and have worked on some pretty cool projets.
+          If you would liek to connect. This is my LinkedIn, IMDB and CV. I'm also reachable over email
+        </span>
 
       </main>
 
@@ -73,29 +93,10 @@ export default function Home() {
           text-decoration: none;
         }
 
-        .title a {
-          color: #0070f3;
-          text-decoration: none;
-        }
-
-        .title a:hover,
-        .title a:focus,
-        .title a:active {
-          text-decoration: underline;
-        }
-
-        .title {
-          margin: 0;
-          line-height: 1.15;
-          font-size: 4rem;
-        }
-
-        .title {
-          text-align: center;
-        }
-
-        .logo {
-          height: 1em;
+        .image {
+          height: 350px;
+          width: 350px;
+          opacity: 0.9;
         }
 
         @media (max-width: 600px) {
@@ -125,6 +126,7 @@ export default function Home() {
           left: 0;
           z-index: 0;
         }
+        
       `}</style>
     </div>
   )
