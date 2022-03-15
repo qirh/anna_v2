@@ -1,15 +1,6 @@
 import Head from 'next/head'
-import Image from 'next/image'
-// import React from 'react'
-
-function imageLoader({ src }) {
-  // const relativeSrc = (src) => src.split("/").pop();
-
-  return src;
-}
 
 export default function Home() {
-  // const lazyRoot = React.useRef(null)
   return (
     <div className="container">
       <Head>
@@ -31,17 +22,6 @@ export default function Home() {
       ` }}></div>
 
       <main>
-
-        {/* <Image
-          loader={imageLoader}
-          src={"https://d2qxpcg73pnz75.cloudfront.net/one-crop.png"}
-          width={350}
-          height={350}
-          className="image"
-        /> */}
-
-        {/* <img src="image.jpg alt="describe the image here">
-        </img> */}
 
         <img
           src="https://d2qxpcg73pnz75.cloudfront.net/one-crop.png"
