@@ -41,7 +41,7 @@ export default function Home() {
 
       <style jsx>{`
         .container {
-          min-height: 100vh;
+          min-height: 100%;
           padding: 0 0.5rem;
           display: flex;
           flex-direction: column;
@@ -92,6 +92,15 @@ export default function Home() {
           font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
             Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
             sans-serif;
+        }
+        body {
+          min-height: 100vh;
+          /* mobile viewport bug fix */
+          min-height: -webkit-fill-available;
+        }
+        
+        html {
+          height: -webkit-fill-available;
         }
 
         * {
