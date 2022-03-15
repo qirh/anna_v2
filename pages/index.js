@@ -41,7 +41,9 @@ export default function Home() {
 
       <style jsx>{`
         .container {
-          min-height: 100%;
+          min-height: 100vh;
+          /* mobile viewport bug fix */
+          min-height: -webkit-fill-available;
           padding: 0 0.5rem;
           display: flex;
           flex-direction: column;
