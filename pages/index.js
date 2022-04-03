@@ -20,14 +20,16 @@ export default function Home() {
     setLinkColors();
     setInterval(() => {
       setLinkColors();
-    }, 5001);
+    }, 5000);
   }, []);
 
   return (
     <div className="container">
       <Head>
         <title>Anna K</title>
-        <link rel="icon" href="/favicon.ico" />
+        {/* <link rel="icon" href="/favicon.ico" /> */}
+        <meta name="theme-color" content="#4d5b7c" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
 
       <div
@@ -106,6 +108,29 @@ export default function Home() {
         }
         .links a:not(:last-child) {
           padding: 0 12px 0 0;
+        }
+        @media not all and (min-resolution: 0.001dpcm) {
+          @supports (-webkit-appearance: none) {
+            /* mobile viewport bug fix */
+            body {
+              min-height: -webkit-fill-available;
+            }
+            html {
+              height: -webkit-fill-available;
+            }
+            .container {
+              min-height: -webkit-fill-available;
+            }
+          }
+        }
+
+        @media screen and (max-height: 700px) {
+          .name {
+            top: 75%;
+          }
+          .links {
+            top: 90%;
+          }
         }
       `}</style>
     </div>
