@@ -20,7 +20,7 @@ export default function Home() {
     setLinkColors();
     setInterval(() => {
       setLinkColors();
-    }, 5000);
+    }, 5001);
   }, []);
 
   return (
@@ -81,7 +81,7 @@ export default function Home() {
           position: relative;
           overflow: hidden;
         }
-        
+
         .background-video {
           object-fit: cover;
           width: 100vw;
