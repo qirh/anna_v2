@@ -1,5 +1,10 @@
 Anna Kukla website
+https://annakukla.com
+https://annakukla.net
+https://annakukla.org
 
-https://nextjs.org/learn/basics/create-nextjs-app/setup
+NextJs website
 
-https://github.com/vercel/next.js/tree/canary/examples/with-static-export
+
+* Favicon https://www.ionos.com/tools/favicon-generator
+* Hosted on Cloudflare pages

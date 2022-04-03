@@ -1,6 +1,28 @@
-import Head from 'next/head'
+import Head from "next/head";
+
+import { useEffect } from "react";
+
+let colors = [
+  "#2ACC5E", // green
+  "#DFB4CB", // pink
+  "#0D9FF3", // blue
+  "#E24181", // red
+  "#F8C331", // yellow
+];
+function setLinkColors() {
+  Array.from(document.getElementsByTagName("a")).forEach((e) => {
+    e.style.color = colors[Math.floor(Math.random() * colors.length)];
+  });
+}
 
 export default function Home() {
+  useEffect(() => {
+    setLinkColors();
+    setInterval(() => {
+      setLinkColors();
+    }, 5001);
+  }, []);
+
   return (
     <div className="container">
       <Head>
@@ -8,114 +30,58 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      {/* <video id="background-video" loop autoPlay muted>
-        <source
-          src="https://d2qxpcg73pnz75.cloudfront.net/annatv_9mb.mp4"
-          type="video/mp4"
-        />
-        Your browser does not support the video tag.
-      </video> */}
-      <div dangerouslySetInnerHTML={{ __html: `
+      <div
+        className="video"
+        dangerouslySetInnerHTML={{
+          __html: `
         <video
           loop
           muted
           autoplay
           playsinline
           type="video/mp4"
-          src="https://d2qxpcg73pnz75.cloudfront.net/annatv_9mb.mp4"
+          src="https://d2qxpcg73pnz75.cloudfront.net/annatv_6mb.mp4"
           class="background-video"
         />,
-      ` }}></div>
-      <main>
+      `,
+        }}
+      ></div>
 
+      <div className="name">
+        <h1>Anna Kukla</h1>
+      </div>
 
-        <h1 className="title">
-          Anna Kukla
-        </h1>
-
-      </main>
-
-      <footer>
-        Made with 💙 in NYC
-      </footer>
-
-      <style jsx>{`
-        .container {
-          min-height: 100vh;
-          padding: 0 0.5rem;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-
-        main {
-          padding: 5rem 0;
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          z-index: 1;
-        }
-
-        footer {
-          width: 100%;
-          height: 50px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          z-index: 1;
-        }
-
-        a {
-          color: inherit;
-          text-decoration: none;
-        }
-
-        .title a {
-          color: #0070f3;
-          text-decoration: none;
-        }
-
-        .title a:hover,
-        .title a:focus,
-        .title a:active {
-          text-decoration: underline;
-        }
-
-        .title {
-          margin: 0;
-          line-height: 1.15;
-          font-size: 4rem;
-        }
-
-        .title {
-          text-align: center;
-        }
-
-        .logo {
-          height: 1em;
-        }
-
-        @media (max-width: 600px) {
-
-        }
-      `}</style>
+      <div className="links">
+        <a href="https://www.imdb.com/name/nm7706290/">IMDB</a>
+        <a href="https://drive.google.com/file/d/1qwZzVOZ4PbAedrvirdGsIDDWAoAwFOoJ">
+          Resume
+        </a>
+        <a href="mailto:kukla.anna.kukla@gmail.com">Email</a>
+      </div>
 
       <style jsx global>{`
+        * {
+          box-sizing: border-box;
+          font-family: "Open Sans", Times;
+        }
+
         html,
         body {
           padding: 0;
           margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-            sans-serif;
         }
 
-        * {
-          box-sizing: border-box;
+        .video,
+        .background-video {
+          z-index: 0;
         }
+
+        .container {
+          min-height: 100vh;
+          position: relative;
+          overflow: hidden;
+        }
+
         .background-video {
           object-fit: cover;
           width: 100vw;
@@ -123,9 +89,25 @@ export default function Home() {
           position: fixed;
           top: 0;
           left: 0;
-          z-index: 0;
+        }
+
+        .name,
+        .links {
+          position: absolute;
+          z-index: 1;
+        }
+        .name {
+          top: 80%;
+          left: 20%;
+        }
+        .links {
+          top: 90%;
+          left: 35%;
+        }
+        .links a:not(:last-child) {
+          padding: 0 12px 0 0;
         }
       `}</style>
     </div>
-  )
+  );
 }
