@@ -80,8 +80,6 @@ export default function Home() {
 
         .container {
           min-height: 100vh;
-           /* mobile viewport bug fix */
-           min-height: -webkit-fill-available;
           position: relative;
           overflow: hidden;
         }
@@ -111,6 +109,21 @@ export default function Home() {
         .links a:not(:last-child) {
           padding: 0 12px 0 0;
         }
+
+        @media screen and (-webkit-min-device-pixel-ratio:0) { 
+          #safari { 
+            .container {
+               /* mobile viewport bug fix */
+               min-height: -webkit-fill-available;
+            }
+          } 
+        } 
+
+        @media screen and (max-width: 768px) {
+          
+        }
+
+
       `}</style>
     </div>
   );
