@@ -50,7 +50,7 @@ export default function Home() {
       ></div>
 
       <div className="name">
-        <h1>Anna Kukla</h1>
+        <h1>🅐🅝🅝🅐 🅚🅤🅚🅛🅐</h1>
       </div>
 
       <div className="links">
@@ -101,6 +101,7 @@ export default function Home() {
         .name {
           top: 80%;
           left: 20%;
+          color: lightskyblue;
         }
         .links {
           top: 90%;
