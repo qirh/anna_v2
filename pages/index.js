@@ -27,7 +27,9 @@ export default function Home() {
     <div className="container">
       <Head>
         <title>Anna K</title>
-        <link rel="icon" href="/favicon.ico" />
+        {/* <link rel="icon" href="/favicon.ico" /> */}
+        <meta name="theme-color" content="#4d5b7c" />
+
       </Head>
 
       <div
@@ -78,6 +80,8 @@ export default function Home() {
 
         .container {
           min-height: 100vh;
+           /* mobile viewport bug fix */
+           min-height: -webkit-fill-available;
           position: relative;
           overflow: hidden;
         }
