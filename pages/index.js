@@ -27,7 +27,6 @@ export default function Home() {
     <div className="container">
       <Head>
         <title>Anna K</title>
-        {/* <link rel="icon" href="/favicon.ico" /> */}
         <meta name="theme-color" content="#4d5b7c" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
