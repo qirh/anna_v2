@@ -50,7 +50,7 @@ export default function Home() {
       ></div>
 
       <div className="name">
-        <h1>Anna Kukla</h1>
+        <h1>🅐🅝🅝🅐 🅚🅤🅚🅛🅐</h1>
       </div>
 
       <div className="links">
@@ -97,14 +97,14 @@ export default function Home() {
         .links {
           position: absolute;
           z-index: 1;
+          left: 5%;
         }
         .name {
           top: 80%;
-          left: 20%;
+          color: lightskyblue;
         }
         .links {
           top: 90%;
-          left: 35%;
         }
         .links a:not(:last-child) {
           padding: 0 12px 0 0;
@@ -124,7 +124,7 @@ export default function Home() {
           }
         }
 
-        @media screen and (max-height: 700px) {
+        @media screen and (max-height: 900px) {
           .name {
             top: 75%;
           }
