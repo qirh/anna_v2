@@ -1,6 +1,29 @@
 import Head from "next/head";
 
+import { useEffect } from "react";
+
+let colors = [
+  "#2ACC5E", // green
+  "#DFB4CB", // pink
+  "#0D9FF3", // blue
+  "#E24181", // red
+  "#F8C331", // yellow
+];
+function setLinkColors() {
+  Array.from(document.getElementsByTagName("a")).forEach((e) => {
+    e.style.color = colors[Math.floor(Math.random() * colors.length)];
+  });
+}
+
 export default function Home() {
+  useEffect(() => {
+    setLinkColors();
+    setInterval(() => {
+      setLinkColors();
+    }, 5000);
+  }, []);
+  
+
   return (
     <div className="container">
       <Head>
@@ -28,7 +51,7 @@ export default function Home() {
       <div className="name">
         <h1>Anna Kukla</h1>
       </div>
-      
+
       <div className="links">
         <a href="https://www.imdb.com/name/nm7706290/">IMDB</a>
         <a href="https://drive.google.com/file/d/1qwZzVOZ4PbAedrvirdGsIDDWAoAwFOoJ">
@@ -40,6 +63,7 @@ export default function Home() {
       <style jsx global>{`
         * {
           box-sizing: border-box;
+          font-family: "Open Sans", Times;
         }
 
         html,
