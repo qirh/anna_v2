@@ -56,21 +56,24 @@ export default function Home() {
       <div className="links">
         <a href="https://www.imdb.com/name/nm7706290/">IMDB</a>
         <a href="https://drive.google.com/file/d/1qwZzVOZ4PbAedrvirdGsIDDWAoAwFOoJ">
-          Resume
+          RESUME
         </a>
-        <a href="mailto:kukla.anna.kukla@gmail.com">Email</a>
+        <a href="mailto:kukla.anna.kukla@gmail.com">EMAIL</a>
       </div>
 
       <style jsx global>{`
         * {
           box-sizing: border-box;
-          font-family: "Open Sans", Times;
+          font-family: "Montserrat Alternates", Times;
         }
 
         html,
         body {
           padding: 0;
           margin: 0;
+        }
+        a {
+          text-decoration: none;
         }
 
         .video,
@@ -102,9 +105,11 @@ export default function Home() {
         .name {
           top: 80%;
           color: lightskyblue;
+          letter-spacing: 5px;
         }
         .links {
           top: 90%;
+          letter-spacing: 2px;
         }
         .links a:not(:last-child) {
           padding: 0 12px 0 0;
