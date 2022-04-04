@@ -135,7 +135,7 @@ export default function Home() {
             left: 8%;
           }
         }
-        @media screen and (max-height: 700px) and (max-width: 400px) { // small phone
+        @media screen and (max-height: 700px) and (max-width: 390px) { // small phone
           .name {
             top: 65%;
           }
