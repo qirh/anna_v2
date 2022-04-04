@@ -6,5 +6,8 @@ https://annakukla.org
 NextJs website
 
 
-* Favicon https://www.ionos.com/tools/favicon-generator
+* Favicon https://www.fontspace.com/category/artone,psychedelic,seymour-chwast
 * Hosted on Cloudflare pages
+
+* Logo inspiration https://fontsinuse.com/typefaces/32764/chwast-art-tone
+    * 

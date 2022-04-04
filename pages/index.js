@@ -1,28 +1,6 @@
 import Head from "next/head";
 
-import { useEffect } from "react";
-
-let colors = [
-  "#2ACC5E", // green
-  "#DFB4CB", // pink
-  "#0D9FF3", // blue
-  "#E24181", // red
-  "#F8C331", // yellow
-];
-function setLinkColors() {
-  Array.from(document.getElementsByTagName("a")).forEach((e) => {
-    e.style.color = colors[Math.floor(Math.random() * colors.length)];
-  });
-}
-
 export default function Home() {
-  useEffect(() => {
-    setLinkColors();
-    setInterval(() => {
-      setLinkColors();
-    }, 5000);
-  }, []);
-
   return (
     <div className="container">
       <Head>
@@ -49,18 +27,32 @@ export default function Home() {
       ></div>
 
       <div className="name">
-        <h1>🅐🅝🅝🅐 🅚🅤🅚🅛🅐</h1>
+        <h1>anna kukla</h1>
       </div>
 
       <div className="links">
-        <a href="https://www.imdb.com/name/nm7706290/">IMDB</a>
-        <a href="https://drive.google.com/file/d/1qwZzVOZ4PbAedrvirdGsIDDWAoAwFOoJ">
+        <a 
+          style={{color: "#DFB4CB"}}
+          href="https://www.imdb.com/name/nm7706290/">IMDB</a>
+        <a
+          style={{color: "#0D9FF3"}}
+          href="https://drive.google.com/file/d/1qwZzVOZ4PbAedrvirdGsIDDWAoAwFOoJ">
           RESUME
         </a>
-        <a href="mailto:kukla.anna.kukla@gmail.com">EMAIL</a>
+        <a
+          style={{color: "#E24181"}}
+          href="mailto:kukla.anna.kukla@gmail.com">EMAIL</a>
       </div>
 
       <style jsx global>{`
+        @font-face {
+          font-family: "dogsmoke";
+          src: url("/fonts/Dogsmoke.ttf");
+          font-style: normal;
+          font-weight: 400;
+          font-display: swap;
+        }
+
         * {
           box-sizing: border-box;
           font-family: "Montserrat Alternates", Times;
@@ -73,6 +65,10 @@ export default function Home() {
         }
         a {
           text-decoration: none;
+        }
+        h1 {
+          font-family: "dogsmoke";
+          font-size: 200px;
         }
 
         .video,
@@ -102,9 +98,8 @@ export default function Home() {
           left: 5%;
         }
         .name {
-          top: 80%;
+          top: 50%;
           color: lightskyblue;
-          letter-spacing: 5px;
         }
         .links {
           top: 90%;
@@ -129,11 +124,15 @@ export default function Home() {
         }
 
         @media screen and (max-height: 900px) {
+          h1 {
+            font-size: 60px;
+          }
           .name {
             top: 75%;
           }
           .links {
             top: 90%;
+            left: 8%;
           }
         }
       `}</style>
