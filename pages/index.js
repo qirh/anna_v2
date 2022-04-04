@@ -123,6 +123,28 @@ export default function Home() {
           }
         }
 
+        @media screen and (max-width: 1150px) { // breakpoint for the name so that it stays on one line
+          h1 {
+            font-size: 150px;
+          }
+        }
+        @media screen and (max-width: 840px) { // breakpoint for the name so that it stays on one line
+          h1 {
+            font-size: 100px;
+          }
+          .name {
+            top: 60%;
+          }
+        }
+        @media screen and (max-width: 560px) { // breakpoint for the name so that it stays on one line
+          h1 {
+            font-size: 70px;
+          }
+          .name {
+            top: 65%;
+          }
+        }
+
         @media screen and (max-height: 920px) and (max-width: 420px) { // big phone
           h1 {
             font-size: 60px;
