@@ -46,8 +46,8 @@ export default function Home() {
 
       <style jsx global>{`
         @font-face {
-          font-family: "dogsmoke";
-          src: url("/fonts/Dogsmoke.ttf");
+          font-family: "dogsmoke-thundercat";
+          src: url("/fonts/DogsmokeThundercat.ttf");
           font-style: normal;
           font-weight: 400;
           font-display: swap;
@@ -67,7 +67,7 @@ export default function Home() {
           text-decoration: none;
         }
         h1 {
-          font-family: "dogsmoke", Times;
+          font-family: "dogsmoke-thundercat", Times;
           font-size: 200px;
         }
 

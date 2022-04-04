@@ -7,7 +7,7 @@ export default function Document() {
         <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap" rel="stylesheet" />
         <link
             rel="preload"
-            href="/fonts/Dogsmoke.ttf"
+            href="/fonts/DogsmokeThundercat.ttf"
             as="font"
             crossOrigin=""
           />
