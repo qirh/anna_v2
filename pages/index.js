@@ -55,7 +55,6 @@ export default function Home() {
 
         * {
           box-sizing: border-box;
-          font-family: "Montserrat Alternates", Times;
         }
 
         html,
@@ -64,10 +63,11 @@ export default function Home() {
           margin: 0;
         }
         a {
+          font-family: "Montserrat Alternates", Times;
           text-decoration: none;
         }
         h1 {
-          font-family: "dogsmoke";
+          font-family: "dogsmoke", Times;
           font-size: 200px;
         }
 
