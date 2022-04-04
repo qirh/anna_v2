@@ -123,7 +123,7 @@ export default function Home() {
           }
         }
 
-        @media screen and (max-height: 900px) {
+        @media screen and (max-height: 920px) {
           h1 {
             font-size: 60px;
           }
@@ -133,6 +133,11 @@ export default function Home() {
           .links {
             top: 90%;
             left: 8%;
+          }
+        }
+        @media screen and (max-height: 700px) {
+          .name {
+            top: 65%;
           }
         }
       `}</style>
