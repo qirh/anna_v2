@@ -2,7 +2,7 @@ import Head from "next/head";
 
 export default function Home() {
   return (
-    <div className="container">
+    <div>
       <Head>
         <title>Anna K</title>
         <meta name="theme-color" content="#4d5b7c" />
@@ -26,22 +26,31 @@ export default function Home() {
         }}
       ></div>
 
-      <div className="name">
-        <h1>anna kukla</h1>
-      </div>
+      <div className="content">
+        <div className="name">
+          <span>anna kukla</span>
+        </div>
 
-      <div className="links">
-        <a 
-          style={{color: "#DFB4CB"}}
-          href="https://www.imdb.com/name/nm7706290/">IMDB</a>
-        <a
-          style={{color: "#0D9FF3"}}
-          href="https://drive.google.com/file/d/1qwZzVOZ4PbAedrvirdGsIDDWAoAwFOoJ">
-          RESUME
-        </a>
-        <a
-          style={{color: "#E24181"}}
-          href="mailto:kukla.anna.kukla@gmail.com">EMAIL</a>
+        <div className="links">
+          <a
+            style={{ color: "#DFB4CB" }}
+            href="https://www.imdb.com/name/nm7706290/"
+          >
+            IMDB
+          </a>
+          <a
+            style={{ color: "#0D9FF3" }}
+            href="https://drive.google.com/file/d/1qwZzVOZ4PbAedrvirdGsIDDWAoAwFOoJ"
+          >
+            RESUME
+          </a>
+          <a
+            style={{ color: "#E24181" }}
+            href="mailto:kukla.anna.kukla@gmail.com"
+          >
+            EMAIL
+          </a>
+        </div>
       </div>
 
       <style jsx global>{`
@@ -66,20 +75,15 @@ export default function Home() {
           font-family: "Montserrat Alternates", Times;
           text-decoration: none;
         }
-        h1 {
+        span {
           font-family: "dogsmoke-thundercat", Times;
           font-size: 200px;
+          font-weight: bold;
         }
 
         .video,
         .background-video {
           z-index: 0;
-        }
-
-        .container {
-          min-height: 100vh;
-          position: relative;
-          overflow: hidden;
         }
 
         .background-video {
@@ -91,18 +95,16 @@ export default function Home() {
           left: 0;
         }
 
-        .name,
-        .links {
+        .content {
           position: absolute;
           z-index: 1;
           left: 5%;
+          bottom: 5%;
         }
         .name {
-          top: 50%;
           color: lightskyblue;
         }
         .links {
-          top: 90%;
           letter-spacing: 2px;
         }
         .links a:not(:last-child) {
@@ -123,21 +125,24 @@ export default function Home() {
           }
         }
 
-        @media screen and (max-width: 1150px) { // breakpoint for the name so that it stays on one line
-          h1 {
+        @media screen and (max-width: 1150px) {
+          // breakpoint for the name so that it stays on one line
+          span {
             font-size: 150px;
           }
         }
-        @media screen and (max-width: 840px) { // breakpoint for the name so that it stays on one line
-          h1 {
+        @media screen and (max-width: 840px) {
+          // breakpoint for the name so that it stays on one line
+          span {
             font-size: 100px;
           }
           .name {
             top: 60%;
           }
         }
-        @media screen and (max-width: 560px) { // breakpoint for the name so that it stays on one line
-          h1 {
+        @media screen and (max-width: 560px) {
+          // breakpoint for the name so that it stays on one line
+          span {
             font-size: 70px;
           }
           .name {
@@ -145,8 +150,9 @@ export default function Home() {
           }
         }
 
-        @media screen and (max-height: 920px) and (max-width: 420px) { // big phone
-          h1 {
+        @media screen and (max-height: 920px) and (max-width: 420px) {
+          // big phone
+          span {
             font-size: 60px;
           }
           .name {
@@ -157,7 +163,8 @@ export default function Home() {
             left: 8%;
           }
         }
-        @media screen and (max-height: 700px) and (max-width: 390px) { // small phone
+        @media screen and (max-height: 700px) and (max-width: 390px) {
+          // small phone
           .name {
             top: 65%;
           }
