@@ -78,18 +78,13 @@ export default function Home() {
         span {
           font-family: "dogsmoke-thundercat", Times;
           font-size: 200px;
+          font-weight: bold;
         }
 
         .video,
         .background-video {
           z-index: 0;
         }
-
-        // .container {
-        //   min-height: 100vh;
-        //   position: relative;
-        //   overflow: hidden;
-        // }
 
         .background-video {
           object-fit: cover;
