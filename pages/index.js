@@ -52,7 +52,7 @@ export default function Home() {
             style={{ color: "#E24181" }}
             href="mailto:kukla.anna.kukla@gmail.com"
           >
-            EMAIL
+            KUKLA.ANNA.KUKLA@GMAIL.COM
           </a>
         </div>
       </div>
