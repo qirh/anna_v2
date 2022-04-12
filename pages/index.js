@@ -44,7 +44,7 @@ export default function Home() {
           </a>
           <a
             style={{ color: "#0D9FF3" }}
-            href="https://drive.google.com/file/d/142ot7ra7VH7HR_SOExWRXuYztr9Pzr2o"
+            href="https://drive.google.com/file/d/1hnbYOR3etL_mqk0Lh5x_YoFjrV44W2WG"
           >
             RESUME
           </a>
