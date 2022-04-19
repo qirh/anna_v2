@@ -7,6 +7,7 @@ export default function Home() {
         <title>Anna K</title>
         <meta name="description" content="Anna Kukla" />
         <meta name="robots" content="index, follow" />
+        <meta http-equiv="content-language" content="en" />
 
         <meta name="theme-color" content="#4d5b7c" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
@@ -34,9 +35,9 @@ export default function Home() {
       ></div>
 
       <div className="content">
-        <div className="name">
-          <span>anna kukla</span>
-        </div>
+        <h1 className="name">
+          anna kukla
+        </h1>
 
         <div className="links">
           <a
@@ -82,11 +83,6 @@ export default function Home() {
           font-family: "Montserrat Alternates", Times;
           text-decoration: none;
         }
-        span {
-          font-family: "dogsmoke-thundercat", Times;
-          font-size: 200px;
-          font-weight: bold;
-        }
 
         .video,
         .background-video {
@@ -110,6 +106,10 @@ export default function Home() {
         }
         .name {
           color: lightskyblue;
+          display: inline;
+          font-family: "dogsmoke-thundercat", Times;
+          font-size: 200px;
+          font-weight: bold;
         }
         .links {
           letter-spacing: 2px;
@@ -134,36 +134,30 @@ export default function Home() {
 
         @media screen and (max-width: 1150px) {
           // breakpoint for the name so that it stays on one line
-          span {
+          .name {
             font-size: 150px;
           }
         }
         @media screen and (max-width: 840px) {
           // breakpoint for the name so that it stays on one line
-          span {
-            font-size: 100px;
-          }
           .name {
+            font-size: 100px;
             top: 60%;
           }
         }
         @media screen and (max-width: 560px) {
           // breakpoint for the name so that it stays on one line
-          span {
-            font-size: 70px;
-          }
           .name {
             top: 65%;
+            font-size: 70px;
           }
         }
 
         @media screen and (max-height: 920px) and (max-width: 420px) {
-          // big phone
-          span {
-            font-size: 60px;
-          }
+          // big phone   
           .name {
             top: 75%;
+            font-size: 60px;
           }
           .links {
             top: 90%;
