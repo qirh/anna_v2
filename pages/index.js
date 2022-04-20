@@ -7,7 +7,6 @@ export default function Home() {
         <title>Anna K</title>
         <meta name="description" content="Anna Kukla" />
         <meta name="robots" content="index, follow" />
-        <meta http-equiv="content-language" content="en" />
 
         <meta name="theme-color" content="#4d5b7c" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
