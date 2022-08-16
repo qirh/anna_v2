@@ -41,7 +41,7 @@ export default function Home() {
         <div className="links">
           <a
             style={{ color: "#DFB4CB" }}
-            href="https://www.imdb.com/name/nm7706290/"
+            href="https://www.imdb.com/name/nm7706290"
           >
             IMDB
           </a>
